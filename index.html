@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link rel="icon" type="image/x-icon" href="movidas\favicon.ico">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Luis Fuentes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    .contenedor {
+      width: 80%;
+      margin: 20px auto;
+      max-width: 960px;
+    }
+
+    .chapuza {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .chapuzayea {
+      width: 70%;
+    }
+
+    .movidas {
+      width: 25%;
+      background-color: #ffffff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    .widget-container {
+      width: 100%;
+      height: 400px;
+      margin-top: 20px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+
+    @media (max-width: 768px) {
+      .contenedor {
+        width: 95%;
+		margin-left: 0;
+      }
+
+      .chapuza {
+        flex-direction: column;
+      }
+
+      .chapuzayea, .movidas {
+        width: 100%;
+      }
+
+      .widget-container {
+        height: 300px; 
+      }
+
+      iframe {
+  		transform: scale(0.40);
+  		transform-origin: top left;
+  		width: 250%; 
+  		height: 250%;
+  		overflow: visible;
+	  }
+	  p,h1,h2 {
+		padding-left: 5px;
+	  }
+
+    }
+  </style>
+</head>
+<body>
+  <div class="contenedor">
+    <div class="chapuza">
+      <div class="chapuzayea">
+          <h2>:~$ whoami</h2>
+          <p>Luis Fuentes González</p>
+          <img src="michi.bmp" alt="michi" style="height: auto; max-width: 90%;">
+      </div>
+
+      <div class="movidas">
+        <h3>Movidas</h3>
+		<ul>
+        <li><a href="movidas\tewc.html">Tecnologías Web Cliente</a></li>
+        <li><a href="movidas\noaa.html">Recepción de Imágenes Satelitales</a></li>
+		</ul>
+      </div>
+    </div>
+
+    <p>
+      <i>El Inmortal</i> Jorge Luis Borges, 1947:
+      <blockquote>
+        "Pensé que Argos y yo participábamos de universos distintos; pensé que nuestras percepciones eran iguales, pero que Argos las combinaba de otra manera y construía con ellas otros objetos; pensé que acaso no había objetos para él, sino un vertiginoso y continuo juego de impresiones brevísimas. Pensé en un mundo sin memoria, sin tiempo, consideré la posibilidad de un lenguaje que ignorara los sustantivos, un lenguaje de verbos impersonales o de indeclinables epítetos. Así fueron muriendo los días y con los días los años, pero algo parecido a la felicidad ocurrió una mañana. 
+        <br>Llovió, con lentitud poderosa."</blockquote>
+      </blockquote>
+    </p>
+  </div>
+
+  <!-- Widget de la AEMET -->
+  <div class="widget-container">
+    <iframe name="iframe_aemet_id33044" id="iframe_aemet_id33044" src="https://www.aemet.es/gl/eltiempo/prediccion/municipios/mostrarwidget/madrid-id28079?w=g4p01001001ohmffffffw992z168x4f86d9t95b6e9r1s8n2" frameborder="0" scrolling="no"></iframe>
+  </div>
+
+</body>
+</html>
