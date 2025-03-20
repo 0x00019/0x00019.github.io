@@ -1,140 +1,209 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Informe de Desarrollo Web - Cafetería El Nao</title>
     <style>
-    body {
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      background-color: #ffffff;
-      color: #000000;
-    }
+        body {
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #000000;
+        }
 
-    .contenedor {
-      width: 80%;
-      margin: 20px auto;
-      max-width: 960px;
-    }
+        .contenedor {
+            width: 80%;
+            margin: 20px auto;
+            max-width: 960px;
+        }
 
-    .chapuza {
-      display: flex;
-      justify-content: space-between;
-    }
+        .chapuza {
+            display: flex;
+            justify-content: space-between;
+        }
 
-    .chapuzayea {
-      width: 70%;
-    }
+        .chapuzayea {
+            width: 70%;
+        }
 
-    .movidas {
-      width: 25%;
-      background-color: #ffffff;
-      padding: 20px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    }
-    .widget-container {
-      width: 100%;
-      height: 400px;
-      margin-top: 20px;
-      overflow: hidden;
-      position: relative;
-    }
+        .movidas {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 200px;
+            padding: 10px;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
 
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
+        .widget-container {
+            width: 100%;
+            height: 400px;
+            margin-top: 20px;
+            overflow: hidden;
+            position: relative;
+        }
 
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
 
-    @media (max-width: 768px) {
-      .contenedor {
-        width: 80%;
-		padding: 0;
-        
-      }
+        .section {
+            margin-bottom: 40px;
+        }
 
-      .chapuza {
-        flex-direction: column;
-      }
+        .section h2 {
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
+        }
 
-      .chapuzayea, .movidas {
-        width: 100%;
-      }
+        .section img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px 0;
+        }
 
-      .widget-container {
-        height: 300px; 
-      }
-	  p,h1,h2 {
-		padding-left: 5px;
-	  }
-    }
-  </style>
+        .section ul {
+            padding-left: 20px;
+        }
+
+        .section ul li {
+            margin: 10px 0;
+        }
+
+        .separator {
+            border-top: 3px dashed #ccc;
+            margin: 40px 0;
+        }
+
+        @media (max-width: 768px) {
+          .movidas{
+            visibility: hidden;
+          }
+            .contenedor {
+                width: 80%;
+                padding: 0;
+            }
+
+            .chapuza {
+                flex-direction: column;
+            }
+
+            .chapuzayea, .movidas {
+                width: 100%;
+            }
+
+            .widget-container {
+                height: 300px;
+            }
+
+            p, h1, h2 {
+                padding-left: 5px;
+            }
+        }
+    </style>
 </head>
 <body>
+    <div class="movidas">
+        <h3>Secciones:</h3>
+        <ul>
+            <li><a href="#web">Web que voy a hacer</a></li>
+            <li><a href="#paletas">Paletas de Colores</a></li>
+        </ul>
+    </div>
+
     <div class="contenedor">
-    <header> 
-        <h1>Informe de Desarrollo Web para la Cafetería El Nao</h1>
-    </header>
+        <header>
+            <h1 id="web">Informe de Desarrollo Web para la Cafetería El Nao</h1>
+        </header>
 
-    <section class="section">
-        <h2>1. Web que voy a hacer. ¿Por qué?</h2>
-        <p>La web que voy a hacer es para un bar-cafetería ubicado en Marín, Pontevedra, llamado El Nao. Esta web es necesaria porque actualmente el establecimiento no dispone de presencia online más allá de Facebook, y considero que tener una página web es fundamental para dar a conocer el negocio y facilitar el acceso a la carta y otra información relevante para los clientes.</p>
-    </section>
+        <section class="section">
+            <h2>Web que voy a hacer. ¿Por qué?</h2>
+            <p>La web que voy a hacer es para un bar-cafetería ubicado en Marín, Pontevedra, llamado El Nao. Esta web es necesaria porque actualmente el establecimiento no dispone de presencia online más allá de Facebook, y considero que tener una página web es fundamental para dar a conocer el negocio y facilitar el acceso a la carta y otra información relevante para los clientes.</p>
+        </section>
 
-    <section class="section">
-        <h2>2. Objetivos y público objetivo</h2>
-        <p>El objetivo principal de la web será poner a disposición de los clientes la carta del establecimiento, así como proporcionar información general, como la ubicación, horarios, contacto, etc. La página estará orientada a los habitantes de Marín, y a turistas que visiten la localidad...</p>
-    </section>
+        <section class="section">
+            <h2>Objetivos y público objetivo</h2>
+            <p>El objetivo principal de la web será poner a disposición de los clientes la carta del establecimiento, así como proporcionar información general, como la ubicación, horarios, contacto, etc. La página estará orientada a los habitantes de Marín, y a turistas que visiten la localidad...</p>
+        </section>
 
-    <section class="section">
-        <h2>3. URLs de webs de la misma temática</h2>
-        <p>A continuación se presentan tres webs de establecimientos en la zona de Pontevedra:</p>
-        <div class="screenshots">
-            <h3>1. <a href="https://www.opulpeiro.es/" target="_blank">Opulpeiro</a></h3>
-            <p>El diseño de la web permite que de un vistazo el usuario sepa dónde debe pinchar para acceder a la información más relevante: el menú y las reservas. <br>Cabe mencionar la buena adaptatividad para soportes móviles, el menú de la parte superior se convierte en un desplegable...</p>
-            <img src="opulpeiro.bmp" style="max-width: 70%;">
-            <img src="opulpeiroI.png" style="max-width: 17.7%;">
-            
-            <h3>2. <a href="https://gumer.es/menu/" target="_blank">Gumer</a></h3>
-            <p>Un ejemplo análogo al anterior, con la diferencia de que el acceso a la carta es inmediato, más conveniente al ser un restaurante. <br>En esta web el logo también se adapta en soporte móvil... </p>
-            <img src="gumer.bmp" style="max-width: 70%;">
-            <img src="gumerI.png" style="max-width: 17.8%;">
-            
-            <h3>3. <a href="https://ristoranteilpiccolo.com/" target="_blank">Ristorante Il Piccolo</a></h3>
-            <p>El siguiente ejemplo no introduce ninguna novedad. Incluso podría ser reprochable cómo se muestra el logo...</p>
-            <img src="piccolo.bmp" style="max-width: 70%;">
-            <img src="piccoloI.png" style="max-width: 17.666%;">
-            <p> El patrón es evidente, el logo en la parte superior izquierda, un menú desplegable con las secciones de la web... <br> Y una página principal con una imagen de algún plato atractivo que levante el apetito.</p>
-        </div>
-        <h3>Criterios de comparación</h3>
-        <p>Al comparar estas webs, he definido los siguientes criterios:</p>
-        <ul>
-            <li><strong>Claridad en la información:</strong> Debe ser muy accesible, a primera vista se debe poder encontrar la carta, el apartado de contacto, horarios...</li>
-            <li><strong>Diseño visual:</strong> Debe ir acorde con la estética y filosofía del establecimiento.</li>
-            <li><strong>Accesibilidad:</strong> Debe ser adaptativa para facilitar la accesibilidad desde distintos dispositivos. Quizás se podría pensar en la opción de traducir la página al inglés con un botón, por la posibilidad de que al establecimiento lleguen turistas...</li>
-        </ul>
-    </section>
+        <section class="section">
+            <h2>URLs de webs de la misma temática</h2>
+            <p>A continuación se presentan tres webs de establecimientos en la zona de Pontevedra:</p>
+            <div class="screenshots">
+                <h3>1. <a href="https://www.opulpeiro.es/" target="_blank">Opulpeiro</a></h3>
+                <p>El diseño de la web permite que de un vistazo el usuario sepa dónde debe pinchar para acceder a la información más relevante: el menú y las reservas. <br>Cabe mencionar la buena adaptatividad para soportes móviles, el menú de la parte superior se convierte en un desplegable...</p>
+                <img src="opulpeiro.bmp" style="max-width: 70%;">
+                <img src="opulpeiroI.png" style="max-width: 17.7%;">
 
-    <section class="section">
-        <h2>4. Secciones y estructura (relación jerárquica de las secciones)</h2>
-        <p>Las webs comparten una estructura jerárquica clara y sencilla, descrita a continuación:</p>
-        <ul>
-            <li><strong>Página Principal:</strong> Breve presentación con información sobre horarios e imágenes del establecimiento. <br>A partir de esta, se accede fácilmente a los siguientes apartados:</li>
-          <ul>
-            <li><strong>Carta:</strong> Menú completo, con descripciones de los productos y precios.</li>
-            <li><strong>Sobre nosotros:</strong> Información sobre el establecimiento, su historia y filosofía.</li>
-            <li><strong>Ubicación:</strong> iframe con la localización del establecimiento.</li>
-            <li><strong>Contacto:</strong> Formulario de contacto y número de teléfono.</li>
-            <li><strong>Redes Sociales:</strong> Accesibles a través del/los iconos de las mismas.</li>
-          </ul>
-        </ul>
-        <img src="estructura.png" style="max-width: 90%">
-    </section>
-</div>
+                <h3>2. <a href="https://gumer.es/menu/" target="_blank">Gumer</a></h3>
+                <p>Un ejemplo análogo al anterior, con la diferencia de que el acceso a la carta es inmediato, más conveniente al ser un restaurante. <br>En esta web el logo también se adapta en soporte móvil...</p>
+                <img src="gumer.bmp" style="max-width: 70%;">
+                <img src="gumerI.png" style="max-width: 17.8%;">
+
+                <h3>3. <a href="https://ristoranteilpiccolo.com/" target="_blank">Ristorante Il Piccolo</a></h3>
+                <p>El siguiente ejemplo no introduce ninguna novedad. Incluso podría ser reprochable cómo se muestra el logo...</p>
+                <img src="piccolo.bmp" style="max-width: 70%;">
+                <img src="piccoloI.png" style="max-width: 17.666%;">
+                <p> El patrón es evidente, el logo en la parte superior izquierda, un menú desplegable con las secciones de la web... <br> Y una página principal con una imagen de algún plato atractivo que levante el apetito.</p>
+            </div>
+            <h3>Criterios de comparación</h3>
+            <p>Al comparar estas webs, he definido los siguientes criterios:</p>
+            <ul>
+                <li><strong>Claridad en la información:</strong> Debe ser muy accesible, a primera vista se debe poder encontrar la carta, el apartado de contacto, horarios...</li>
+                <li><strong>Diseño visual:</strong> Debe ir acorde con la estética y filosofía del establecimiento.</li>
+                <li><strong>Accesibilidad:</strong> Debe ser adaptativa para facilitar la accesibilidad desde distintos dispositivos. Quizás se podría pensar en la opción de traducir la página al inglés con un botón, por la posibilidad de que al establecimiento lleguen turistas...</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Secciones y estructura (relación jerárquica de las secciones)</h2>
+            <p>Las webs comparten una estructura jerárquica clara y sencilla, descrita a continuación:</p>
+            <ul>
+                <li><strong>Página Principal:</strong> Breve presentación con información sobre horarios e imágenes del establecimiento. <br>A partir de esta, se accede fácilmente a los siguientes apartados:</li>
+                <ul>
+                    <li><strong>Carta:</strong> Menú completo, con descripciones de los productos y precios.</li>
+                    <li><strong>Sobre nosotros:</strong> Información sobre el establecimiento, su historia y filosofía.</li>
+                    <li><strong>Ubicación:</strong> iframe con la localización del establecimiento.</li>
+                    <li><strong>Contacto:</strong> Formulario de contacto y número de teléfono.</li>
+                    <li><strong>Redes Sociales:</strong> Accesibles a través del/los iconos de las mismas.</li>
+                </ul>
+            </ul>
+            <img src="estructura.png" style="max-width: 90%">
+        </section>
+
+        <div class="separator"></div>
+
+        <section id="paletas" class="section">
+            <h2>Paletas de Colores</h2>
+            <p>El Nao es un bar que fundamenta toda su identidad visual en las motos y un estilo vintage muy característico.</p>
+            <p>A partir del logo del establecimiento se ha generado la siguiente paleta:</p>
+            <div style="display: flex; justify-content: center; align-items: center;">
+              <img src="logo.png" style="max-height: 300px; width: auto;">
+              <img src="paleta.jpeg" style="max-height: 300px; width: auto; margin-left: 10%;">
+          </div>
+          
+            <p>Trabajar con menos colores haría que la web se alejase de lo que quiere transmitir el establecimiento, pero por mostrar otra
+              posibilidad, basándonos en el interior del establecimiento, podemos generar otra paleta:
+            </p>
+            <div style="display: flex; justify-content: center; align-items: center;">
+              <img src="nao.bmp" style="max-height: 300px; width: auto;">
+              <img src="paleta2.jpeg" style="max-height: 300px; width: auto; margin-left: 10%;">
+          </div>
+          <p>Pese a presentar una mayor armonía cromática, no se ajusta a lo que transmite el local realmente y está lejos de 
+            "ir bien con el logo"
+          </p>
+          <p>Finalmente, considerando los colores del logo, lo que el local quiere transmitir y su apariencia interior, la paleta escogida:</p>
+          <div style="display: flex; justify-content: center; align-items: center;">
+          <img src="paletafinal.jpeg" style="max-width: 600px;">
+          </div>
+        </section>
+    </div>
 </body>
 </html>
