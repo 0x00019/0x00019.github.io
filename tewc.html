@@ -116,6 +116,7 @@
             <li><a href="#web">Web que voy a hacer</a></li>
             <li><a href="#paletas">Paletas de Colores</a></li>
             <li><a href="#estatica">Web estática</a></li>
+            <li><a href="#accesibilidad">Accesibilidad</a></li>
         </ul>
     </div>
 
@@ -234,10 +235,19 @@
             <p>Finalemente en el footer, con pequeños cambios, repetí la información de dirección, contacto y horario (ya proporcionada en el apartado de "¿Quiénes Somos?")y añadí links a las redes sociales.</p>
             <img src="quinta.png"  style="max-width: 600px; padding-left: 18%">
         </section>
+        <div class="separator"></div>
 
+        <section id="accesibilidad" class="section">
+            <h2>Accesibilidad</h2>
+            <p>Tras realizar un análisis (mediante Lighthouse de chrome), se ha obtenido una puntuación de accesibilidad de <strong>84</strong> sobre 100. A pesar del buen resultado, se han detectado un aspecto fundamental a mejorar:</p>
+            <ul>
+                <strong>Elementos &lt;iframe&gt; sin título:</strong> Los iframes utilizados no disponen de un título descriptivo. Se debería añadir un atributo <code>title</code> a los elementos <code>&lt;iframe&gt;</code> para que los usuarios de tecnologías asistivas entiendan su contenido. 
+                Este problema es propio de la totalidad de la web, es cierto que no he hecho uso de los "Text alternatives" que requiere el WCAG 2.0 en su principio 1 y procederé a corregirlo.
+            </ul>
+            <p>Las herramientas propuestas TAW y WAVE no funcionan correctamente.</p>
+        </section>
+        
     </div>
-
-
 
 </body>
 </html>
